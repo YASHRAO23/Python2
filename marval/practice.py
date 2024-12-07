@@ -107,4 +107,64 @@
 # area = length * width
 # print(f"the area is :{area}cm²")
 
-# # hfjbjnckNCKJnK
+#####       Day 2     ###############
+##operators
+
+# import math
+# radius = float(input("Enter the radius of a circle : "))
+
+# cicumference = 2 * math.pi * radius
+
+# print(f"The cicumferance is : {cicumference}")
+
+# import math
+
+# radius =float(input("Enter the radius of circle : "))
+
+# area = math.pi * pow(radius,2)
+# print(f"the area of circle is {area}")
+
+# a = float(input("Enter side A : "))
+# b = float(input("Enter side B : "))
+
+# c = math.sqrt(pow(a,2) + pow(b,2))
+# print(f"The length of hypotenuse is {c}")
+
+
+# age = int(input("Enter the age : "))
+ 
+# if age>=5:
+#     print("you are eligible for school")
+# else:
+#     print("you are not eligible for school")
+
+
+# dairy = False
+
+# if dairy:
+#     print("diary is open")
+# else:
+#     print("dairy is colsed")
+    
+## Python Calculator
+
+operator = input("Enter the an operator(+ - * /):")
+
+num1 = float(input("Enter the 1st number : "))
+num2 = float(input("Enter the 2nd number: "))
+
+if operator == "+" :
+    result = num1 + num2
+    print(result)
+elif operator == "-":
+    result = num1 - num2 
+    print(result)
+elif operator == "*":
+    result = num1 * num2
+    print(result)
+elif operator == "/":
+    result = num1 / num2
+    print(result)
+else:
+    print("your code is not working")
+    
