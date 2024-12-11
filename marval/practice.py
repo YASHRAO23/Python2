@@ -287,5 +287,181 @@
 # print(phone_number)
 
 
-result = help(str)
-print(result)
+# result = help(str)
+# print(result)
+
+
+
+################################
+
+#username is no more thne 12 charecters
+#username must not containe spaces
+#username must not contsine digits
+
+# username = input("Enter your username : ")
+
+# if len(username) > 12 :
+#     print("Your username can't more thane 12 charecters")
+# elif not username.find(" ") == -1:
+#     print("Your username can't containe spaces")
+# elif not username.isalpha():
+#     print("Your username can't containe digits ")
+# else:
+#     print(f"welcome {username}")
+
+
+############## indexing #########
+# accessing elements of a seuence using [](indexing operator)
+#       [start : end : step]
+
+#credit_number = "1234-5678-9012-3456"
+
+# print(credit_number[0])
+# print(credit_number[:4])
+# print(credit_number[5:9]) 
+
+##############  Format specifire ############ 
+# price1 = 33.550
+# price2 = -5586.5
+# price3 = 12.55
+
+# print(f"Price 1 is ${price1:-10}")
+# print(f"Price 1 is ${price2:.3f}")
+# print(f"Price 1 is ${price3:+,.3f}")
+
+########## While loops #########
+
+# name = input("Enter your name: ")
+
+# while name == " ":
+#     print(" You did not enter your name : ")
+#     name = input("Enter your name: ")
+    
+# print(f"Hello {name}")
+     
+
+# count = 1 
+
+# while count <=5 :
+#     print("Count is :" , count)
+#     count += 1
+
+############ Python compound interest calculator #########
+
+# principle = 0 
+# rate = 0 
+# time = 0
+
+
+# while principle <= 0 :
+#     principle = float(input("Enter the principle amount : "))
+#     if principle <=0 :
+#         print("Principle can't be less than eual to zero")
+    
+# print(principle)
+
+# while rate <= 0:
+#     rate = float(input("Enter the rate of interest : "))
+#     if rate <= 0:
+#         print("Interst rate can;t be less than equal to zero")
+# print(rate)
+
+# while time <=0 :
+#     time =int(input("Enter the time in yeras :"))
+#     if time <= 0:
+#         print("Time can't be less than equal to zero")
+# print(time)
+
+
+# total = principle * pow( (1 + rate / 100), time)
+# print(f"Balance after {time} years /s: ${total:.2f}")
+
+###for loop
+
+# for num in reversed(range(1,21)):
+#     print(num)
+#     print("done")  # prints: done
+
+# for x in range (1 , 21):
+#     if x == 13:
+#         continue
+#     else:
+#         print(x)
+
+
+######### nested loop ############
+# A loop within anothr loop(outer , inner)
+#    outer loop :
+#         inner loop:
+
+### reactangle 
+
+# rows = int(input("Enter the # of rows : "))
+# cloumns = int(input("Enter thne # of columns :"))
+# symbol = input("Enter the symbol to use :")
+
+# for i in range(rows):
+#     for j in range(cloumns):
+#         print(symbol, end="")
+#     print()
+# for x in range(3):
+#     for x in range (1,10):
+#       print(x, end="")
+#     print()
+
+
+
+############# reversed a string #############
+ 
+ 
+# positive_numbers = [-1,-2,-3,-4]
+ 
+# reversed_positive = positive_numbers[::-1]
+# print("Reversed positive Numbers :",reversed_positive)
+
+
+
+########## countdown timer progrm ############
+
+# import time 
+
+# my_time = int(input("Enter the time in seconds: "))
+
+# for x in range (0,my_time): 
+#     seconds = x % 60
+#     minutes = int(x / 60) % 60
+#     hours = int(x / 3600)
+#     print(f"{hours: 02}:{minutes: 02}:{seconds:02}")
+    
+#     time.sleep(1)
+    
+# print("TIME'S UP!")
+
+
+
+############## Shopping cart program ##################
+
+# foods =[]
+# prices=[]
+# total =0
+
+# while True:
+#     food = input("Enter a food to buy(q to quite) : ")
+#     if food.lower()== "q":
+#         break
+#     else:
+#         price = float(input(f"Enter the price of a {food}: $"))
+#         foods.append(food)
+#         prices.append(price)
+
+# print("-----Your Cart-----")
+
+# for food in foods:
+#     print(food, end="")
+    
+# for price in prices:
+#     total += price
+
+# print()  
+# print(f"YOUR Total is :${total}")
+
