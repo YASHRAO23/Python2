@@ -1,82 +1,82 @@
 ##### 2D collections ##########
 
-# fruits = {"apple","banana","orange","cetaphal"}
-# vegitables = ["cabages","mushrooms","tomato","batata"]
-# meats =["chicken","fish","tandori","tikka"]
+fruits = {"apple","banana","orange","cetaphal"}
+vegitables = ["cabages","mushrooms","tomato","batata"]
+meats =["chicken","fish","tandori","tikka"]
 
-# groceries =[fruits,vegitables,meats]
+groceries =[fruits,vegitables,meats]
 
-# for category in groceries:
-#     for fruits in category:
-#         print(fruits, end=" ")
-#     print()
+for category in groceries:
+    for fruits in category:
+        print(fruits, end=" ")
+    print()
         
         
-# ######### 2D tuple ########
+######### 2D tuple ########
 
-# num_pad = ((1, 2, 3),
-#            (4, 5, 6),
-#            (7, 8, 9),
-#            ("*", 0, "#"))
+num_pad = ((1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#"))
 
 
-# for row in num_pad:
-#     for num in row:
-#         print(num, end="")
-#     print()
+for row in num_pad:
+    for num in row:
+        print(num, end="")
+    print()
         
         
 ############ Quiz game ###########
 
-# questions =(("Which one is your fav anime? :"),
-#            ("which one is your fav  charactor? :"),
-#            ("which one power you wish you can have in real life? :"),
-#            ("Which one is best anime girl charactor? :"),
-#            ("Tell me episod number you want to repeadted daily? :"))
+questions =(("Which one is your fav anime? :"),
+           ("which one is your fav  charactor? :"),
+           ("which one power you wish you can have in real life? :"),
+           ("Which one is best anime girl charactor? :"),
+           ("Tell me episod number you want to repeadted daily? :"))
 
-# options = (("A.one piece","B.Nauroto","C.Solo leveling","D.jijutsu"),
-#            ("A.Kakashi","B.Naruto","C.levi","D.itachi"),
-#            ("A.rasingan","B.chakara","C.lighting strike","D.telepoart"),
-#            ("A.Henata","B.sakura","C.liya","D.kriya"),
-#            ("A.225","B.336","C.55","D.08"))
+options = (("A.one piece","B.Nauroto","C.Solo leveling","D.jijutsu"),
+           ("A.Kakashi","B.Naruto","C.levi","D.itachi"),
+           ("A.rasingan","B.chakara","C.lighting strike","D.telepoart"),
+           ("A.Henata","B.sakura","C.liya","D.kriya"),
+           ("A.225","B.336","C.55","D.08"))
 
-# answers = ("C", "A", "C", "A", "D")
+answers = ("C", "A", "C", "A", "D")
 
-# user_guesses = []
-# user_score = 0
-# question_num = 0
+user_guesses = []
+user_score = 0
+question_num = 0
 
 
-# for question in questions:
-#     print("-------------------------------")
-#     print(question)
-#     for option in options[question_num]:
+for question in questions:
+    print("-------------------------------")
+    print(question)
+    for option in options[question_num]:
         
-#         print(option)
+        print(option)
         
-#     guess = input("Enter (A, B, C, D): ").upper()
-#     user_guesses.append(guess)
-#     if user_guesses == answers[question_num]:
-#         user_score +=1
-#         print("CORRECT!")
-#     else:
-#         print("INCORRECT!")
-#         print(f"{answers[question_num]}")
-#         question_num += 1
+    guess = input("Enter (A, B, C, D): ").upper()
+    user_guesses.append(guess)
+    if user_guesses == answers[question_num]:
+        user_score +=1
+        print("CORRECT!")
+    else:
+        print("INCORRECT!")
+        print(f"{answers[question_num]}")
+        question_num += 1
 
-# print("answers : ",end="")       
-# for answer in answers:
-#     print(answers,end=" ")
-# print()
+print("answers : ",end="")       
+for answer in answers:
+    print(answers,end=" ")
+print()
 
-# print("user_guesses : ",end="")       
-# for guess in user_guesses:
-#     print(guess,end=" ")
-# print()
+print("user_guesses : ",end="")       
+for guess in user_guesses:
+    print(guess,end=" ")
+print()
 
 
-# score = int(user_score / len(questions) * 100)
-# print(f"Your score is : {score}%")
+score = int(user_score / len(questions) * 100)
+print(f"Your score is : {score}%")
 
 
 
@@ -84,82 +84,82 @@
 
 ################ updated version of quiz code ########################
 
-# def display_question(question: str, options: tuple) -> None:
-#     """Display a question and its options."""
-#     print("-------------------------------")
-#     print(question)
-#     for option in options:
-#         print(option)
+def display_question(question: str, options: tuple) -> None:
+    """Display a question and its options."""
+    print("-------------------------------")
+    print(question)
+    for option in options:
+        print(option)
 
-# def get_user_guess() -> str:
-#     """Get the user's guess."""
-#     while True:
-#         guess = input("Enter (A, B, C, D): ").upper()
-#         if guess in ["A", "B", "C", "D"]:
-#             return guess
-#         else:
-#             print("Invalid input. Please enter A, B, C, or D.")
+def get_user_guess() -> str:
+    """Get the user's guess."""
+    while True:
+        guess = input("Enter (A, B, C, D): ").upper()
+        if guess in ["A", "B", "C", "D"]:
+            return guess
+        else:
+            print("Invalid input. Please enter A, B, C, or D.")
 
-# def calculate_score(user_guesses: list, answers: tuple) -> int:
-#     """Calculate the user's score."""
-#     score = sum(1 for guess, answer in zip(user_guesses, answers) if guess == answer)
-#     return int(score / len(answers) * 100)
+def calculate_score(user_guesses: list, answers: tuple) -> int:
+    """Calculate the user's score."""
+    score = sum(1 for guess, answer in zip(user_guesses, answers) if guess == answer)
+    return int(score / len(answers) * 100)
 
-# def main() -> None:
-#     """Run the quiz game."""
-#     questions = (
-#         "Which one is your fav anime? :",
-#         "which one is your fav  charactor? :",
-#         "which one power you wish you can have in real life? :",
-#         "Which one is best anime girl charactor? :",
-#         "Tell me episod number you want to repeadted daily? :"
-#     )
+def main() -> None:
+    """Run the quiz game."""
+    questions = (
+        "Which one is your fav anime? :",
+        "which one is your fav  charactor? :",
+        "which one power you wish you can have in real life? :",
+        "Which one is best anime girl charactor? :",
+        "Tell me episod number you want to repeadted daily? :"
+    )
 
-#     options = (
-#         ("A.one piece", "B.Nauroto", "C.Solo leveling", "D.jijutsu"),
-#         ("A.Kakashi", "B.Naruto", "C.levi", "D.itachi"),
-#         ("A.rasingan", "B.chakara", "C.lighting strike", "D.telepoart"),
-#         ("A.Henata", "B.sakura", "C.liya", "D.kriya"),
-#         ("A.225", "B.336", "C.55", "D.08")
-#     )
+    options = (
+        ("A.one piece", "B.Nauroto", "C.Solo leveling", "D.jijutsu"),
+        ("A.Kakashi", "B.Naruto", "C.levi", "D.itachi"),
+        ("A.rasingan", "B.chakara", "C.lighting strike", "D.telepoart"),
+        ("A.Henata", "B.sakura", "C.liya", "D.kriya"),
+        ("A.225", "B.336", "C.55", "D.08")
+    )
 
-#     answers = ("C", "A", "C", "A", "D")
+    answers = ("C", "A", "C", "A", "D")
 
-#     user_guesses = []
-#     for question, options in zip(questions, options):
-#         display_question(question, options)
-#         guess = get_user_guess()
-#         user_guesses.append(guess)
-#         if guess == answers[questions.index(question)]:
-#             print("CORRECT!")
-#         else:
-#             print("INCORRECT!")
-#             print(f"{answers[questions.index(question)]}")
+    user_guesses = []
+    for question, options in zip(questions, options):
+        display_question(question, options)
+        guess = get_user_guess()
+        user_guesses.append(guess)
+        if guess == answers[questions.index(question)]:
+            print("CORRECT!")
+        else:
+            print("INCORRECT!")
+            print(f"{answers[questions.index(question)]}")
 
-#     print("answers : ", end="")
-#     for answer in answers:
-#         print(answer, end=" ")
-#     print()
+    print("answers : ", end="")
+    for answer in answers:
+        print(answer, end=" ")
+    print()
 
-#     print("guesses : ", end="")
-#     for guess in user_guesses:
-#         print(guess, end=" ")
-#     print()
+    print("guesses : ", end="")
+    for guess in user_guesses:
+        print(guess, end=" ")
+    print()
 
-#     score = calculate_score(user_guesses, answers)
-#     print(f"Your score is : {score}%")
+    score = calculate_score(user_guesses, answers)
+    print(f"Your score is : {score}%")
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
 
-###############  dictionaries ############
+##############  dictionaries ############
 
-# capitals = {"USA" : "washington DC",
-#             "INDIA": "Delhi",
-#             "Russia": "moscow",
-#             "China" : "Biljing"}
+capitals = {"USA" : "washington DC",
+            "INDIA": "Delhi",
+            "Russia": "moscow",
+            "China" : "Biljing"}
 
-# print(capitals.get("USA"))
+print(capitals.get("USA"))
 
 ########### Array ###########
 
@@ -239,3 +239,22 @@ print(heros)
 
 heros.sort()
 print(heros)
+
+
+
+###################### print 
+## Create a list of all odd numbers between 1 and a max number. Max number is something you need to take from a user using input() function
+
+
+max = int(input("Enter the max number you want : "))
+
+odd_numbers = []  
+
+# for i in range (1,max):
+#     if i % 2 == 1 :
+#         odd_numbers.append(i)  
+# print(f"odd_numbers : ",odd_numbers) 
+
+
+odd_numbers = [i for i in range(1,max) if i % 2 == 1]
+print(f"odd_numbers :", odd_numbers)
